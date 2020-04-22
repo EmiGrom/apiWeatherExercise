@@ -12,6 +12,7 @@ import org.json.JSONObject;
 public class MainApp implements Runnable {
 
     private Scanner scanner;
+    private HTTPService weatherService = new HTTPService();
 
     private void startApp() {
         scanner = new Scanner(System.in);
@@ -36,16 +37,34 @@ public class MainApp implements Runnable {
     }
 
     private void connectByCityName() {
+        try {
+            System.out.println("Enter the city name: ");
+            scanner.nextLine();
+            String cityToCheck = scanner.nextLine();
+            String weather = weatherService.connect(Config.APP_URL + "?q=" + cityToCheck + "&appid=" + Config.APP_ID);
+            System.out.println(weather);
 
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
     private void connectByZipCode() {
+        try {
+            System.out.println("Enter the zip code: ");
+            scanner.nextLine();
+            String codeToCheck = scanner.nextLine();
+            String weather = weatherService.connect(Config.APP_URL + "?q=" + codeToCheck + "&appid=" + Config.APP_ID);
+            System.out.println(weather);
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     private void parseJson(String json) {
         JSONObject jsonObject = new JSONObject(json);
-        JSONArray jsonWeather = jsonObject.getJSONArray("weather1");
+        JSONArray jsonWeather = jsonObject.getJSONArray("weather");
         List<Weather> weatherList = new ArrayList<>();
 
         for (int i = 0; i < jsonWeather.length(); i++) {
@@ -62,6 +81,9 @@ public class MainApp implements Runnable {
         }
 
         System.out.println("Logs: ");
+        System.out.println(weatherList);
+        System.out.println(weatherList.size());
+        System.out.println(jsonWeather.length());
     }
 
     @Override
