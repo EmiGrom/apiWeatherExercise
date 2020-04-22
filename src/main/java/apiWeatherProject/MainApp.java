@@ -36,15 +36,32 @@ public class MainApp implements Runnable {
     }
 
     private void connectByCityName() {
-        //TODO
+
+        }
     }
 
     private void connectByZipCode() {
-        //TODO
-    }
+
 
     private void parseJson(String json) {
-        //TODO
+        JSONObject jsonObject = new JSONObject(json);
+        JSONArray jsonWeather = jsonObject.getJSONArray("weather1");
+        List<Weather> weatherList = new ArrayList<>();
+
+        for (int i = 0; i < jsonWeather.length(); i++) {
+            JSONObject one = (JSONObject) jsonWeather.get(i);
+            Weather weather = new Weather();
+            weather.setTemp(Integer.parseInt(one.get("temp").toString()));
+            weather.setTemp_max(Integer.parseInt(one.get("temp_max").toString()));
+            weather.setAverageTemperature(Integer.parseInt(one.get("average temperature").toString()));
+            weather.setClouds(one.get("clouds").toString());
+            weather.setWind(one.get("wind").toString());
+            weather.setPressure(one.get("pressure").toString());
+            weather.setVisibility(one.get("visibility").toString());
+            weather.setWeatherDescription(one.get("weather description").toString());
+        }
+
+        System.out.println("Logs: ");
     }
 
     @Override
