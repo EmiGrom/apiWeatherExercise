@@ -18,12 +18,28 @@ public class MainApp implements Runnable {
 
     private void startApp() {
         scanner = new Scanner(System.in);
-        System.out.println("Get weather information by: \n0 - Finish the action \n1 - City name \n2 - Zip code \n3 - GPS coordinates");
-        Integer name = scanner.nextInt();
-        chooseTypeSearching(name);
+        System.out.println("What do you want to do \n0 - Finish the action \n1 - Get current weather information \n2 - Get 5 day forecast");
+        Integer action = scanner.nextInt();
+        chooseAction(action);
     }
 
-    private void chooseTypeSearching(Integer typeNumber) {
+    private void chooseAction(Integer typeNumber) {
+        switch (typeNumber) {
+            case 0:
+                break;
+            case 1:
+                System.out.println("Get weather information by: \n0 - Finish the action \n1 - City name \n2 - Zip code \n3 - GPS coordinates");
+                Integer name = scanner.nextInt();
+                chooseTypeSearchingCurrent(name);
+            case 2:
+                System.out.println("Get weather information by: \n0 - Finish the action \n1 - City name \n2 - Zip code \n3 - GPS coordinates");
+                name = scanner.nextInt();
+                chooseTypeSearching5day(name);
+        }
+
+    }
+
+    private void chooseTypeSearchingCurrent(Integer typeNumber) {
         switch (typeNumber) {
             case 0:
                 break;
@@ -37,6 +53,24 @@ public class MainApp implements Runnable {
                 break;
             case 3:
                 connectByGPSCoordinates();
+                startApp();
+                break;
+        }
+    }
+    private void chooseTypeSearching5day(Integer typeNumber) {
+        switch (typeNumber) {
+            case 0:
+                break;
+            case 1:
+                connectByCityName5day();
+                startApp();
+                break;
+            case 2:
+                connectByZipCode5day();
+                startApp();
+                break;
+            case 3:
+                connectByGPSCoordinates5day();
                 startApp();
                 break;
         }
@@ -93,6 +127,57 @@ public class MainApp implements Runnable {
         }
         return response;
     }
+    private void connectByCityName5day() {
+        System.out.println("City name: ");
+        String cityName = scanner.next();
+        String response = connectByCityName5day(cityName);
+        parseJson5day(response);
+    }
+
+    public String connectByCityName5day(String cityName) {
+        String response = null;
+        try {
+            response = new HTTPService().connect(Config.APP_ID5DAY + "?q=" + cityName + "&appid=" + Config.APP_ID);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    private void connectByZipCode5day() {
+        System.out.println("Zip code: ");
+        String zipCode = scanner.next();
+        String response = connectByZipCode5day(zipCode);
+        parseJson5day(response);
+    }
+
+    public String connectByZipCode5day(String zipCode) {
+        String response = null;
+        try {
+            response = new HTTPService().connect(Config.APP_ID5DAY + "?zip=" + zipCode + ",pl" + "&appid=" + Config.APP_ID);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    private void connectByGPSCoordinates5day() {
+        System.out.println("GPS Coordinates: ");
+        String longitude = scanner.next();
+        String latitude = scanner.next();
+        String response = connectByGPSCoordinates5day(latitude, longitude);
+        parseJson5day(response);
+    }
+
+    public String connectByGPSCoordinates5day(String latitude, String longitude) {
+        String response = null;
+        try {
+            response = new HTTPService().connect(Config.APP_ID5DAY + "?lat=" + latitude + "&lon=" + longitude + "&appid=" + Config.APP_ID);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
     //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
 
     private void parseJson(String json) {
@@ -118,6 +203,23 @@ public class MainApp implements Runnable {
             System.out.println("Humidity: " + humidity + " %");
             System.out.println("Pressure: " + pressure + " hPa");
             System.out.println("Cloud: " + clouds + "%");
+
+
+        } else {
+            System.out.println("Operation error");
+        }
+    }
+
+    private void parseJson5day(String json) {
+        //TODO
+        double temp;
+        int pressure;
+        int humidity;
+        int clouds;
+
+        JSONObject rootObject = new JSONObject(json);
+        if (rootObject.getInt("cod") == 200) {
+            //TODO forecast for 5 days
 
 
         } else {

@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="30c20ffb-4b3f-4521-ba0e-69e5847fe12e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/apiWeatherExercise.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MainAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/apiWeatherProject/MainAppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apiWeatherProject/Config.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiWeatherProject/Config.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,32 +152,48 @@
       <option name="project" value="LOCAL" />
       <updated>1587637507040</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="tests update (assertions)">
+      <created>1587642302250</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1587642302250</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="tests" />
     <MESSAGE value="tests update" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests update" />
+    <MESSAGE value="tests update (assertions)" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests update (assertions)" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1323" height="230" key="GridCell.Tab.0.bottom" timestamp="1587640997198">
+    <state x="235" y="0" key="CommitChangelistDialog2" timestamp="1587648940024">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587640997198" />
-    <state width="1323" height="230" key="GridCell.Tab.0.center" timestamp="1587640997198">
+    <state x="235" y="0" key="CommitChangelistDialog2/0.0.1366.728@0.0.1366.728" timestamp="1587648940024" />
+    <state width="1323" height="230" key="GridCell.Tab.0.bottom" timestamp="1587643794268">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587640997198" />
-    <state width="1323" height="230" key="GridCell.Tab.0.left" timestamp="1587640997197">
+    <state width="1323" height="230" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1587643794268" />
+    <state width="1323" height="230" key="GridCell.Tab.0.center" timestamp="1587643794268">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587640997197" />
-    <state width="1323" height="230" key="GridCell.Tab.0.right" timestamp="1587640997198">
+    <state width="1323" height="230" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1587643794268" />
+    <state width="1323" height="230" key="GridCell.Tab.0.left" timestamp="1587643794268">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1323" height="230" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587640997198" />
+    <state width="1323" height="230" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1587643794268" />
+    <state width="1323" height="230" key="GridCell.Tab.0.right" timestamp="1587643794268">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1323" height="230" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1587643794268" />
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1587642308347">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1587642308347" />
     <state x="499" y="142" key="chooseDestDirectoryDialog" timestamp="1587638683064">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
