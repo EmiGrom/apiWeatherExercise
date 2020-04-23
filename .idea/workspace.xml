@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="30c20ffb-4b3f-4521-ba0e-69e5847fe12e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MainAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainAppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -55,7 +55,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
@@ -68,16 +68,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
+            <state relative-caret-position="133">
+              <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#244#245#0" expanded="true" />
                 <element signature="e#307#308#0" expanded="true" />
-                <element signature="e#2223#2224#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -104,8 +104,8 @@
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/Weather.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainAppTest.java" />
-        <option value="$PROJECT_DIR$/src/test/java/MainAppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" />
+        <option value="$PROJECT_DIR$/src/test/java/MainAppTest.java" />
       </list>
     </option>
   </component>
@@ -176,7 +176,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587636991540" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587637458326" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -286,22 +286,17 @@
       <option name="project" value="LOCAL" />
       <updated>1587636562236</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="tests update">
+      <created>1587637016408</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1587637016409</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainAppTest - 2020.04.23 at 11h 43m 03s.xml">
-      <configuration name="MainAppTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainAppTest - 2020.04.23 at 11h 47m 41s.xml">
-      <configuration name="MainAppTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainAppTest - 2020.04.23 at 11h 54m 42s.xml">
-      <configuration name="MainAppTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainAppTest - 2020.04.23 at 11h 56m 32s.xml">
-      <configuration name="MainAppTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainAppTest - 2020.04.23 at 12h 01m 27s.xml">
       <configuration name="MainAppTest" configurationId="JUnit" />
     </history-entry>
@@ -320,6 +315,18 @@
     <history-entry file="MainAppTest - 2020.04.23 at 12h 10m 53s.xml">
       <configuration name="MainAppTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainAppTest - 2020.04.23 at 12h 16m 40s.xml">
+      <configuration name="MainAppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainAppTest - 2020.04.23 at 12h 20m 12s.xml">
+      <configuration name="MainAppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainAppTest - 2020.04.23 at 12h 22m 25s.xml">
+      <configuration name="MainAppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainAppTest - 2020.04.23 at 12h 24m 16s.xml">
+      <configuration name="MainAppTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -334,7 +341,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44637054" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41170096" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -384,7 +391,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="tests" />
+    <MESSAGE value="tests update" />
+    <option name="LAST_COMMIT_MESSAGE" value="tests update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/Weather.java">
@@ -452,19 +460,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#2223#2224#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -472,6 +467,19 @@
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#4363#4364#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#244#245#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
           </folding>
         </state>
       </provider>

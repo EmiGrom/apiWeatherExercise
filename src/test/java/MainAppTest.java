@@ -45,7 +45,7 @@ public class MainAppTest {
         String responseTest = mainApp.connectByZipCode("05-077");
         JSONObject jsonObject = new JSONObject(responseTest);
         assertEquals(200, jsonObject.getInt("cod"));
-        assertEquals("Warsaw", jsonObject.getString("name"));
+        assertEquals("Warszawa/Wesoła", jsonObject.getString("name"));
 
     }
 
@@ -53,10 +53,10 @@ public class MainAppTest {
     @DisplayName("Weather test for the Warsaw by GPS coordinates")
     void connectByGPSCoordinates() {
         MainApp mainApp = new MainApp();
-        String responseTest = mainApp.connectByGPSCoordinates("21,13", "52,14");
+        String responseTest = mainApp.connectByGPSCoordinates("52,14", "21,13");
         JSONObject jsonObject = new JSONObject(responseTest);
         assertEquals(200, jsonObject.getInt("cod"));
-        assertEquals("Warsaw", jsonObject.getString("name"));
+        assertEquals("Kabaty", jsonObject.getString("name"));
 
     }
 
