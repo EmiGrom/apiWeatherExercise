@@ -16,7 +16,7 @@ public class MainApp implements Runnable {
 
     private void startApp() {
         scanner = new Scanner(System.in);
-        System.out.println("Wybierz po czym chcesz znaleźć miejsce dla którego wyświetlisz pogodę \n0 - Zakończ działanie \n1 - Nazwa Miasta \n2 - Kod pocztowy");
+        System.out.println("Get weather information by: \n0 - Finish the action \n1 - City name \n2 - Zip code");
         Integer name = scanner.nextInt();
         chooseTypeSearching(name);
     }
@@ -37,27 +37,37 @@ public class MainApp implements Runnable {
     }
 
     private void connectByCityName() {
-        try {
-            System.out.println("Enter the city name: ");
-            scanner.nextLine();
-            String cityToCheck = scanner.nextLine();
-            String weather = weatherService.connect(Config.APP_URL + "?q=" + cityToCheck + "&appid=" + Config.APP_ID);
-            System.out.println(weather);
+        System.out.println("City name: ");
+        String cityName = scanner.next();
+        String response = connectByCityName(cityName);
+        parseJson(response);
+    }
 
+    public String connectByCityName(String cityName) {
+        String response = null;
+        try {
+            response = new HTTPService().connect(Config.APP_URL + "?q=" + cityName + "&appid=" + Config.APP_ID);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return response;
     }
 
     private void connectByZipCode() {
-        System.out.println("Podaj kod pocztowy miasta: ");
-        String zipcode = scanner.next();
+        System.out.println("Zip code: ");
+        String zipCode = scanner.next();
+        String response = connectByZipCode(zipCode);
+        parseJson(response);
+    }
+
+    public String connectByZipCode(String zipCode) {
+        String response = null;
         try {
-            String response = new HTTPService().connect(Config.APP_URL + "?zip=" + zipcode + ",pl" + "&appid=" + Config.APP_ID);
-            parseJson(response);
+            response = new HTTPService().connect(Config.APP_URL + "?q=" + zipCode + "&appid=" + Config.APP_ID);
         } catch (IOException e) {
             e.printStackTrace();
         }
+        return response;
     }
 
     private void parseJson(String json) {
@@ -86,9 +96,14 @@ public class MainApp implements Runnable {
 
 
         } else {
-            System.out.println("Error");
+            System.out.println("Operation error");
         }
     }
+    //JSONObject jsonObject = new JSONObject(json);
+    //JSONObject jsonArrayWeather = jsonObject.getJSONObject("main");
+    //
+    //String temp = jsonObject.getJSONObject("main").get("temp").toString();
+    //String temp_max = jsonObject.getJSONObject("main").get("temp_max").toString(); (...)
 
     @Override
     public void run() {
