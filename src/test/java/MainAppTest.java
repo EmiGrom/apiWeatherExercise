@@ -53,7 +53,7 @@ public class MainAppTest {
     @DisplayName("Weather test for the Warsaw by GPS coordinates")
     void connectByGPSCoordinates() {
         MainApp mainApp = new MainApp();
-        String responseTest = mainApp.connectByGPSCoordinates("52,17", "21,03");
+        String responseTest = mainApp.connectByGPSCoordinates("21,13", "52,14");
         JSONObject jsonObject = new JSONObject(responseTest);
         assertEquals(200, jsonObject.getInt("cod"));
         assertEquals("Warsaw", jsonObject.getString("name"));

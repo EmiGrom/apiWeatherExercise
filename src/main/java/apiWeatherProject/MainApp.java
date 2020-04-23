@@ -36,10 +36,6 @@ public class MainApp implements Runnable {
                 startApp();
                 break;
             case 3:
-                System.out.println("Enter latitude of the city:");
-                latitude = scanner.next();
-                System.out.println("Enter longitude of the city:");
-                latitude = scanner.next();
                 connectByGPSCoordinates();
                 startApp();
                 break;
@@ -84,19 +80,20 @@ public class MainApp implements Runnable {
         System.out.println("GPS Coordinates: ");
         String longitude = scanner.next();
         String latitude = scanner.next();
-        String response = connectByGPSCoordinates(longitude, latitude);
+        String response = connectByGPSCoordinates(latitude, longitude);
         parseJson(response);
     }
 
-    public String connectByGPSCoordinates(String longitude, String latitude) {
+    public String connectByGPSCoordinates(String latitude, String longitude) {
         String response = null;
         try {
-            response = new HTTPService().connect(Config.APP_URL + "?" + "lat=" + latitude + "&lon=" + longitude + "&appid=" + Config.APP_ID);
+            response = new HTTPService().connect(Config.APP_URL + "?lat=" + latitude + "&lon=" + longitude + "&appid=" + Config.APP_ID);
         } catch (IOException e) {
             e.printStackTrace();
         }
         return response;
     }
+    //api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={your api key}
 
     private void parseJson(String json) {
         //do przeanalizowania

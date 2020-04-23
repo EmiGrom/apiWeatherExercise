@@ -4,7 +4,7 @@
     <list default="true" id="30c20ffb-4b3f-4521-ba0e-69e5847fe12e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/MainAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainAppTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -58,11 +58,11 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="143">
-              <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+            <state relative-caret-position="126">
+              <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#4502#4503#0" expanded="true" />
+                <element signature="e#4363#4364#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -71,8 +71,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+            <state relative-caret-position="374">
+              <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#244#245#0" expanded="true" />
@@ -176,7 +176,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587636476783" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587636991540" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -191,7 +191,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.MainAppTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="apiWeatherProject.Main" />
       <module name="apiWeatherExercise" />
@@ -221,8 +221,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MainAppTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -279,16 +279,17 @@
       <option name="project" value="LOCAL" />
       <updated>1587635420643</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="tests">
+      <created>1587636562236</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1587636562236</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MainAppTest - 2020.04.23 at 11h 15m 21s.xml">
-      <configuration name="MainAppTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MainAppTest - 2020.04.23 at 11h 42m 41s.xml">
-      <configuration name="MainAppTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MainAppTest - 2020.04.23 at 11h 43m 03s.xml">
       <configuration name="MainAppTest" configurationId="JUnit" />
     </history-entry>
@@ -313,6 +314,12 @@
     <history-entry file="MainAppTest - 2020.04.23 at 12h 06m 16s.xml">
       <configuration name="MainAppTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MainAppTest - 2020.04.23 at 12h 10m 27s.xml">
+      <configuration name="MainAppTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MainAppTest - 2020.04.23 at 12h 10m 53s.xml">
+      <configuration name="MainAppTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -327,7 +334,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.18959913" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.44637054" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -438,10 +445,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="55" column="75" selection-start-line="55" selection-start-column="75" selection-end-line="55" selection-end-column="75" />
+        <state relative-caret-position="374">
+          <caret line="55" column="72" selection-start-line="55" selection-start-column="72" selection-end-line="55" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#244#245#0" expanded="true" />
@@ -451,20 +465,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="80" column="5" lean-forward="true" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
+        <state relative-caret-position="126">
+          <caret line="82" column="69" selection-start-line="82" selection-start-column="69" selection-end-line="82" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#4502#4503#0" expanded="true" />
+            <element signature="e#4363#4364#0" expanded="true" />
           </folding>
         </state>
       </provider>
