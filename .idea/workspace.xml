@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="30c20ffb-4b3f-4521-ba0e-69e5847fe12e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/MainAppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MainAppTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/apiWeatherProject/MainApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -25,11 +24,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
+            <state relative-caret-position="68">
+              <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
             </state>
           </provider>
         </entry>
@@ -68,10 +67,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
+            <state relative-caret-position="184">
               <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -102,10 +101,10 @@
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/HTTPService.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/Weather.java" />
-        <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainAppTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java" />
         <option value="$PROJECT_DIR$/src/test/java/MainAppTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java" />
       </list>
     </option>
   </component>
@@ -176,7 +175,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587637487850" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587637521305" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -293,7 +292,21 @@
       <option name="project" value="LOCAL" />
       <updated>1587637016409</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="tests update">
+      <created>1587637485198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1587637485198</updated>
+    </task>
+    <task id="LOCAL-00010" summary="tests update">
+      <created>1587637507040</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1587637507040</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -453,13 +466,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="88" selection-start-line="5" selection-start-column="88" selection-end-line="5" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/MainApp.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
@@ -473,7 +479,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/MainAppTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
+        <state relative-caret-position="184">
           <caret line="47" column="37" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -481,6 +487,13 @@
             <element signature="e#307#308#0" expanded="true" />
             <element signature="e#2232#2233#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/apiWeatherProject/Config.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
         </state>
       </provider>
     </entry>
