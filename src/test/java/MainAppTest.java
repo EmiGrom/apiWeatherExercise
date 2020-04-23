@@ -50,6 +50,17 @@ public class MainAppTest {
     }
 
     @Test
+    @DisplayName("Weather test for the Warsaw by GPS coordinates")
+    void connectByGPSCoordinates() {
+        MainApp mainApp = new MainApp();
+        String responseTest = mainApp.connectByGPSCoordinates("52,17", "21,03");
+        JSONObject jsonObject = new JSONObject(responseTest);
+        assertEquals(200, jsonObject.getInt("cod"));
+        assertEquals("Warsaw", jsonObject.getString("name"));
+
+    }
+
+    @Test
     @Disabled("Application wasn't served")
     void parseJsonForXDaysTest() {
         //TODO

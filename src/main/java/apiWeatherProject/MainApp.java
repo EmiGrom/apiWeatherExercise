@@ -12,11 +12,13 @@ import org.json.JSONObject;
 public class MainApp implements Runnable {
 
     private Scanner scanner;
-    private HTTPService weatherService = new HTTPService();
+    private String latitude;
+    private String longitude;
+
 
     private void startApp() {
         scanner = new Scanner(System.in);
-        System.out.println("Get weather information by: \n0 - Finish the action \n1 - City name \n2 - Zip code");
+        System.out.println("Get weather information by: \n0 - Finish the action \n1 - City name \n2 - Zip code \n3 - GPS coordinates");
         Integer name = scanner.nextInt();
         chooseTypeSearching(name);
     }
@@ -31,6 +33,14 @@ public class MainApp implements Runnable {
                 break;
             case 2:
                 connectByZipCode();
+                startApp();
+                break;
+            case 3:
+                System.out.println("Enter latitude of the city:");
+                latitude = scanner.next();
+                System.out.println("Enter longitude of the city:");
+                latitude = scanner.next();
+                connectByGPSCoordinates();
                 startApp();
                 break;
         }
@@ -64,6 +74,24 @@ public class MainApp implements Runnable {
         String response = null;
         try {
             response = new HTTPService().connect(Config.APP_URL + "?q=" + zipCode + "&appid=" + Config.APP_ID);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return response;
+    }
+
+    private void connectByGPSCoordinates() {
+        System.out.println("GPS Coordinates: ");
+        String longitude = scanner.next();
+        String latitude = scanner.next();
+        String response = connectByGPSCoordinates(longitude, latitude);
+        parseJson(response);
+    }
+
+    public String connectByGPSCoordinates(String longitude, String latitude) {
+        String response = null;
+        try {
+            response = new HTTPService().connect(Config.APP_URL + "lat=" + latitude + "&lon=" + longitude + "&appid=" + Config.APP_ID);
         } catch (IOException e) {
             e.printStackTrace();
         }
