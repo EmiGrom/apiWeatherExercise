@@ -216,12 +216,32 @@ public class MainApp implements Runnable {
         int pressure;
         int humidity;
         int clouds;
+        String dt_txt;
 
         JSONObject rootObject = new JSONObject(json);
+        JSONArray listArray = rootObject.getJSONArray("list");
         if (rootObject.getInt("cod") == 200) {
-            //TODO forecast for 5 days
 
 
+
+            for (int i=0; i<listArray.length();i++) {
+                JSONObject dayObject = listArray.getJSONObject(i);
+                JSONObject mainObject = dayObject.getJSONObject("main");
+                DecimalFormat df = new DecimalFormat("#.##");
+                temp = mainObject.getDouble("temp");
+                temp = temp - 273;
+
+                pressure = mainObject.getInt("pressure");
+                humidity = mainObject.getInt("humidity");
+                JSONObject cloudsObject = dayObject.getJSONObject("clouds");
+                clouds = cloudsObject.getInt("all");
+                dt_txt = dayObject.getString("dt_txt");
+
+                System.out.println("Time "+dt_txt+ "   Temperature: " + df.format(temp) +
+                        " \u00b0C"+"   Humidity: " + humidity + " %" +
+                        "   Pressure: " + pressure + " hPa"+"   Cloud: " + clouds + "%");
+
+               }
         } else {
             System.out.println("Operation error");
         }
