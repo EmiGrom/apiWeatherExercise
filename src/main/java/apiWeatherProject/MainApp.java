@@ -50,40 +50,44 @@ public class MainApp implements Runnable {
     }
 
     private void connectByZipCode() {
+        System.out.println("Podaj kod pocztowy miasta: ");
+        String zipcode = scanner.next();
         try {
-            System.out.println("Enter the zip code: ");
-            scanner.nextLine();
-            String codeToCheck = scanner.nextLine();
-            String weather = weatherService.connect(Config.APP_URL + "?q=" + codeToCheck + "&appid=" + Config.APP_ID);
-            System.out.println(weather);
-
+            String response = new HTTPService().connect(Config.APP_URL + "?zip=" + zipcode + ",pl" + "&appid=" + Config.APP_ID);
+            parseJson(response);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
     private void parseJson(String json) {
-        JSONObject jsonObject = new JSONObject(json);
-        JSONArray jsonWeather = jsonObject.getJSONArray("weather");
-        List<Weather> weatherList = new ArrayList<>();
+        //do przeanalizowania
+        double temp;
+        int pressure;
+        int humidity;
+        int clouds;
 
-        for (int i = 0; i < jsonWeather.length(); i++) {
-            JSONObject one = (JSONObject) jsonWeather.get(i);
-            Weather weather = new Weather();
-            weather.setTemp(Integer.parseInt(one.get("temp").toString()));
-            weather.setTemp_max(Integer.parseInt(one.get("temp_max").toString()));
-            weather.setAverageTemperature(Integer.parseInt(one.get("average temperature").toString()));
-            weather.setClouds(one.get("clouds").toString());
-            weather.setWind(one.get("wind").toString());
-            weather.setPressure(one.get("pressure").toString());
-            weather.setVisibility(one.get("visibility").toString());
-            weather.setWeatherDescription(one.get("weather description").toString());
+        JSONObject rootObject = new JSONObject(json);
+        if (rootObject.getInt("cod") == 200) {
+            JSONObject mainObject = rootObject.getJSONObject("main");
+            DecimalFormat df = new DecimalFormat("#.##");
+            temp = mainObject.getDouble("temp");
+            temp = temp - 273;
+
+            pressure = mainObject.getInt("pressure");
+            humidity = mainObject.getInt("humidity");
+            JSONObject cloudsObject = rootObject.getJSONObject("clouds");
+            clouds = cloudsObject.getInt("all");
+
+            System.out.println("Temperature: " + df.format(temp) + " \u00b0C");
+            System.out.println("Humidity: " + humidity + " %");
+            System.out.println("Pressure: " + pressure + " hPa");
+            System.out.println("Cloud: " + clouds + "%");
+
+
+        } else {
+            System.out.println("Error");
         }
-
-        System.out.println("Logs: ");
-        System.out.println(weatherList);
-        System.out.println(weatherList.size());
-        System.out.println(jsonWeather.length());
     }
 
     @Override
