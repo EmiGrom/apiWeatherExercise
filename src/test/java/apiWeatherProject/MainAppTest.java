@@ -5,8 +5,6 @@ import org.junit.jupiter.api.*;
 
 import java.io.IOException;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 public class MainAppTest {
     @BeforeAll
     static void init() {
@@ -34,8 +32,8 @@ public class MainAppTest {
         MainApp mainApp = new MainApp();
         String responseTest = mainApp.connectByCityName("Warsaw");
         JSONObject jsonObject = new JSONObject(responseTest);
-        assertEquals(200, jsonObject.getInt("cod"));
-        assertEquals("Warsaw", jsonObject.getString("name"));
+        Assertions.assertEquals(200, jsonObject.getInt("cod"));
+        Assertions.assertEquals("Warsaw", jsonObject.getString("name"));
     }
 
     @Test
@@ -44,8 +42,8 @@ public class MainAppTest {
         MainApp mainApp = new MainApp();
         String responseTest = mainApp.connectByZipCode("05-077");
         JSONObject jsonObject = new JSONObject(responseTest);
-        assertEquals(200, jsonObject.getInt("cod"));
-        assertEquals("Warszawa/Wesoła", jsonObject.getString("name"));
+        Assertions.assertEquals(200, jsonObject.getInt("cod"));
+        Assertions.assertEquals("Warszawa/Wesoła", jsonObject.getString("name"));
 
     }
 
@@ -55,8 +53,8 @@ public class MainAppTest {
         MainApp mainApp = new MainApp();
         String responseTest = mainApp.connectByGPSCoordinates("52,14", "21,13");
         JSONObject jsonObject = new JSONObject(responseTest);
-        assertEquals(200, jsonObject.getInt("cod"));
-        assertEquals("Kabaty", jsonObject.getString("name"));
+        Assertions.assertEquals(200, jsonObject.getInt("cod"));
+        Assertions.assertEquals("Kabaty", jsonObject.getString("name"));
 
     }
 
