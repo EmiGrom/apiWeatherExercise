@@ -73,7 +73,7 @@ public class MainApp implements Runnable {
     public String connectByZipCode(String zipCode) {
         String response = null;
         try {
-            response = new HTTPService().connect(Config.APP_URL + "?q=" + zipCode + "&appid=" + Config.APP_ID);
+            response = new HTTPService().connect(Config.APP_URL + "?zip=" + zipCode + ",pl" + "&appid=" + Config.APP_ID);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -91,7 +91,7 @@ public class MainApp implements Runnable {
     public String connectByGPSCoordinates(String longitude, String latitude) {
         String response = null;
         try {
-            response = new HTTPService().connect(Config.APP_URL + "lat=" + latitude + "&lon=" + longitude + "&appid=" + Config.APP_ID);
+            response = new HTTPService().connect(Config.APP_URL + "?" + "lat=" + latitude + "&lon=" + longitude + "&appid=" + Config.APP_ID);
         } catch (IOException e) {
             e.printStackTrace();
         }
